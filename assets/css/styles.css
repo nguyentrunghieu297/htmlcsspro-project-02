@@ -592,13 +592,15 @@ button {
 
 .blog .blog-list {
     margin-top: 55px;
+    padding-bottom: 38px;
     gap: 30px;
     display: flex;
+    overflow: hidden;
 }
 
 .blog .blog-list .blog-item {
-    width: 33.33%;
-    flex: 1;
+    flex-shrink: 0;
+    width: calc(33.33% - 20px);
     border-radius: 16px;
     background: #fff;
 }
@@ -666,4 +668,97 @@ button {
 .blog .blog-item .info .btn-cta:hover {
     background-color: var(--primary-color);
     color: white;
+}
+
+.blog .dots {
+    /* margin-top: 38px; */
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.blog .dots .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: rgba(95, 91, 83, 1);
+    cursor: pointer;
+}
+
+.blog .dots .dot.active {
+    background-color: var(--primary-color);
+    cursor: default;
+}
+
+/* ===== Footer ===== */
+
+.footer {
+    padding-top: 96px;
+    background: #2e2100;
+}
+
+.footer .row {
+    display: flex;
+    padding-bottom: 38px;
+    border-bottom: 1px solid #59554b;
+}
+
+.footer .row .column:first-child {
+    width: 35%;
+}
+
+.footer .row .column:first-child .desc {
+    max-width: 267px;
+    margin: 18px 0;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.86;
+}
+
+.footer .row .socials .icon {
+    margin-right: 18px;
+}
+
+.footer .row .column {
+    width: 21%;
+}
+
+.footer .row .column .title {
+    display: inline-block;
+    padding-bottom: 14px;
+    padding-right: 48px;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75; /* 175% */
+    border-bottom: 1px solid #59554b;
+}
+
+.footer .row .column .list-item {
+    margin-top: 26px;
+}
+
+.footer .row .column .list-item a {
+    margin-top: 12px;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    line-height: 1.86; /* 185.714% */
+}
+
+.footer .row .column .list-item a strong {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.86; /* 185.714% */
+}
+
+.footer .row .column:last-child {
+    width: 23%;
+}
+
+.footer .copyright {
+    padding: 28px 0;
+    text-align: center;
+    color: rgba(128, 125, 116, 1);
 }
